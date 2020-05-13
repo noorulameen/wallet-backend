@@ -50,7 +50,7 @@ module.exports = {
                 }
                 wallet[index] = { ...id, ...date, ...newPost }
                 helper.writeJSONFile(process.cwd()+filename, wallet)
-                resolve(wallet[index])
+                resolve([wallet[index]])
             })
             .catch(err => reject(err))
     })

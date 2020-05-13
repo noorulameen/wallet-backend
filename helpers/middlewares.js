@@ -7,8 +7,8 @@ function mustBeInteger(req, res, next) {
     }
 }
 function checkFieldsPost(req, res, next) {
-    const { description, income, expense } = req.body
-    if (description && income && expense) {
+    const { description, income, expense, date } = req.body
+    if (description && income && expense && date) {
         next()
     } else {
         res.status(400).json({ message: 'fields are not good' })
